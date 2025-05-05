@@ -1,0 +1,52 @@
+#lock {
+    background-image: url("/home/muku/.config/wlogout/icons/lock.png");
+}
+
+#logout {
+    background-image: url("/home/muku/.config/wlogout/icons/logout.png");
+}
+
+#suspend {
+    background-image: url("/home/muku/.config/wlogout/icons/suspend.png");
+}
+
+#hibernate {
+    background-image: url("/home/muku/.config/wlogout/icons/hibernate.png");
+}
+
+#shutdown {
+    background-image: url("/home/muku/.config/wlogout/icons/shutdown.png");
+}
+
+#reboot {
+    background-image: url("/home/muku/.config/wlogout/icons/reboot.png");
+}
+
+* {
+	background-image: none;
+	box-shadow: none;
+}
+
+window {
+	background-color: rgba(26, 26, 26, 0.90);
+}
+
+button {
+	border-radius: 20px;
+	margin-right: 20px;
+	border-color: #E5E4E2;
+	text-decoration-color: #cad3f5;
+	color: #cad3f5;
+	background-color: #343434;
+	border-style: solid;
+	border-width: 2px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 25%;
+}
+
+button:focus, button:active, button:hover {
+	/* 20% Overlay 2, 80% mantle */
+	background-color: rgb(53, 57, 75);
+	outline-style: none;
+}

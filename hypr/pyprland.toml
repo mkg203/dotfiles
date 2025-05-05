@@ -1,0 +1,38 @@
+[pyprland]
+plugins = [
+	"scratchpads",
+]
+
+[scratchpads.term]
+animation = "fromTop"
+command = "kitty --class kitty-dropterm"
+class = "kitty-dropterm"
+position = "17% 6%"
+size = "65% 60%"
+offset = "200%"
+
+[scratchpads.music]
+animation = "fromLeft"
+command = "spotify"
+class = "Spotify"
+class_match = true
+size = "50% 80%"
+offset = "200%"
+lazy = true
+
+# [scratchpads.discord]
+# animation = "fromRight"
+# command = "discord"
+# class = "Discord"
+# class_match = true
+# size = "50% 80%"
+# offset = "200%"
+# lazy = true
+
+[scratchpads.htop]
+animation = "fromLeft"
+command = "kitty --class kitty-taskbar -e htop"
+class = "kitty-taskbar"
+size = "30% 80%"
+offset = "200%"
+lazy = true
