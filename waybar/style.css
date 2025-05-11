@@ -13,6 +13,15 @@
   font-size: 16px; /* Increased from 12px */
 }
 
+menu {
+	border-radius: 5px;
+	background: #161320;
+	color: #B5E8E0;
+}
+menuitem {
+	border-radius: 5px;
+}
+
 window#waybar {
   color: @fg;
   background: @bg;
@@ -39,7 +48,7 @@ button:hover {
 }
 
 #workspaces button {
-  color: @fg;
+  color: @highlight;
 }
 
 #workspaces {
@@ -54,7 +63,7 @@ button:hover {
 }
 
 #workspaces button.active {
-  color: @highlight;
+  color: @fg;
 }
 
 /*River Tags/Workspaces*/
@@ -178,8 +187,9 @@ label:focus {
 }
 
 #battery.critical:not(.charging) {
-  background-color: @alert;
-  color: @fg;
+  /* background-color: @alert; */
+  color: @alert;
+  /* border-radius: 8px; */
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: linear;
