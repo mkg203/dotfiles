@@ -55,108 +55,99 @@
 * {
   font-family: 'Inconsolata Nerd Font', monospace;
   font-size: 18px;
+  -gtk-icon-shadow: none;
+  -gtk-box-shadow: none;
 }
 
 /* Window */
 window {
-  margin: 0px;
-  padding: 10px;
+  background-color: rgba(0, 0, 0, 0);  /* Fully transparent background */
+  border: none;
+  border-radius: 20px;
+  margin: 0;
+  padding: 0;
+  animation: slideIn 0.25s ease-in-out both;
+}
+
+@keyframes slideIn { 
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Apply the visual container with border in the outer box */
+#outer-box {
+  background-color: @base;
   border: 0.13em solid @platinum;
   border-radius: 20px;
-  overflow: hidden;
-  background-color: @base;
-  animation: slideIn 0.25s ease-in-out both;
-  /* overflow: hidden; */
+  margin: 0;
+  padding: 20px;
 }
 
-/* Slide In */
-@keyframes slideIn { 0% {
-     opacity: 0;
-  }
-
-  100% {
-     opacity: 1;
-  }
-}
-
-/* Inner Box */
 #inner-box {
-  margin: 5px;
-  padding: 10px;
+  background-color: transparent;
   border: none;
-  background-color: @base;
-  border-radius: 0.1em;
+  margin: 0;
+  padding: 0;
   animation: fadeIn 0.25s ease-in-out both;
 }
 
-/* Fade In */
-@keyframes fadeIn {
-  0% {
-     opacity: 0;
-  }
-
-  100% {
-     opacity: 1;
-  }
-}
-
-/* Outer Box */
-#outer-box {
-  margin: 5px;
-  padding: 10px;
-  border: none;
-  border-radius: 20px;
-  background-color: @base;
-}
-
-/* Scroll */
 #scroll {
-  margin: 0px;
-  padding: 10px;
+  background-color: transparent;
   border: none;
-  background-color: @base;
+  margin: 0;
+  padding: 0;
 }
 
-/* Input */
 #input {
-  margin: 5px 20px;
-  padding: 10px;
-  border: none;
-  overflow: hidden;
   background-color: @base;
   color: @text;
+  border: none;
+  border-radius: 10px;
+  margin: 0 0 15px 0;
+  padding: 10px;
   animation: fadeIn 0.25s ease-in-out both;
 }
 
 #input image {
-  border: none;
   color: @teal;
 }
 
 #input * {
-  outline: 4px solid @teal!important;
+  outline: 4px solid @teal !important;
 }
 
-/* Text */
 #text {
-  margin: 5px;
-  border: none;
   color: @text;
+  border: none;
+  margin: 0;
+  padding: 0 10px;
   animation: fadeIn 0.5s ease-in-out both;
 }
 
 #entry {
   background-color: @base;
+  border-radius: 10px;
+  border: none;
+  margin: 5px 0;
+  padding: 8px 0;
+}
+
+#entry image {
+  margin-left: 10px;
 }
 
 #entry arrow {
-  border: none;
   color: @teal;
 }
 
-/* Selected Entry */
 #entry:selected {
   border: 0.11em solid @teal;
+  background-color: @base;
 }
 
 #entry:selected #text {
@@ -164,5 +155,5 @@ window {
 }
 
 #entry:drop(active) {
-  background-color: @teal!important;
+  background-color: @teal !important;
 }
