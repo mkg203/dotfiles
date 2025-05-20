@@ -12,7 +12,7 @@
 * {
   min-height: 0;
   font-family: "JetBrainsMono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
-  font-size: 16px; /* Increased from 12px */
+  font-size: 16px; 
 }
 
 menu {
@@ -29,8 +29,8 @@ window#waybar {
   background: @bg;
   transition-property: background-color;
   transition-duration: 0.5s;
-  border: 3px solid @bordercolor; /* Increased from 2px */
-  border-radius: 14px; /* Increased from 10px */
+  border: 3px solid @bordercolor; 
+  border-radius: 14px; 
 }
 
 button {
@@ -39,8 +39,8 @@ button {
   /* Avoid rounded borders under each button name */
   border: none;
   border-radius: 0px;
-  padding: 0px 8px; /* Increased from 5px */
-  margin: 8px 0px; /* Increased from 5px */
+  padding: 0px 8px; 
+  margin: 8px 0px; 
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
@@ -80,7 +80,7 @@ button:hover {
   color: #FFFFFF;
   background: @bg;
 
-  /*If you need round border icons*/
+  
   border-radius: 0px;
   padding: 0px 0px;
   margin: 8px 0px; /* Increased from 5px */
@@ -129,8 +129,8 @@ button:hover {
 #idle_inhibitor,
 #window,
 #mpd {
-  padding: 8px 8px; /* Increased from 5px */
-  margin: 0px 8px; /* Increased from 5px */
+  padding: 8px 8px; 
+  margin: 0px 8px; 
   color: #FFFFFF;
 }
 
@@ -146,17 +146,17 @@ button:hover {
 #clock {
   color: #FFFFFF;
   background-color: @bg;
-  margin: 8px; /* Increased from 5px */
-  padding: 0px 8px; /* Increased from 5px */
-  border-radius: 8px; /* Increased from 5px */
+  margin: 8px; 
+  padding: 0px 8px; 
+  border-radius: 8px; 
 }
 
 #custom-group {
   color: #FFFFFF;
   background-color: @islandcolor;
-  margin: 8px; /* Increased from 5px */
-  padding: 0px 8px; /* Increased from 5px */
-  border-radius: 8px; /* Increased from 5px */
+  margin: 8px; 
+  padding: 0px 8px; 
+  border-radius: 8px; 
 }
 
 #custom-separator {
@@ -166,11 +166,11 @@ button:hover {
 }
 
 #tray {
-  /*background-color: @bordercolor;*/
-  border: 2px solid @bordercolor; /* Increased from 1px */
-  margin: 8px; /* Increased from 5px */
-  padding: 0px 20px; /* Increased from 15px */
-  border-radius: 8px; /* Increased from 5px */
+  
+  border: 2px solid @bordercolor; 
+  margin: 8px; 
+  padding: 0px 20px; 
+  border-radius: 8px; 
 }
 
 #network.disconnected,
