@@ -1,0 +1,4 @@
+#!/bin/bash
+# Save as ~/.config/wofi/scripts/files_run
+
+xdg-open "$@"

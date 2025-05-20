@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Configuration
+SEARCH_DIRS="$HOME"  # Base directory to search
+MAX_DEPTH=8  # How deep to search
+EXCLUDE_PATTERNS=".git/ node_modules/ .cache/"  # Directories to exclude
+
+# Use fd to find files and pass to wofi
+selected_file=$(fd --type f --exclude "{${EXCLUDE_PATTERNS}}" --max-depth $MAX_DEPTH . "$SEARCH_DIRS" | wofi --dmenu -p "Open file:")
+
+# Open the selected file if one was chosen
+if [ -n "$selected_file" ]; then
+    xdg-open "$selected_file"
+fi

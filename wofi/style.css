@@ -1,31 +1,9 @@
-@define-color	rosewater  #f4dbd6;
-@define-color	rosewater-rgb  rgb(244, 219, 214);
-@define-color	flamingo  #f0c6c6;
-@define-color	flamingo-rgb  rgb(240, 198, 198);
-@define-color	pink  #f5bde6;
-@define-color	pink-rgb  rgb(245, 189, 230);
-@define-color	mauve  #c6a0f6;
-@define-color	mauve-rgb  rgb(198, 160, 246);
-@define-color	red  #ed8796;
-@define-color	red-rgb  rgb(237, 135, 150);
-@define-color	maroon  #ee99a0;
-@define-color	maroon-rgb  rgb(238, 153, 160);
-@define-color	peach  #f5a97f;
-@define-color	peach-rgb  rgb(245, 169, 127);
-@define-color	yellow  #eed49f;
-@define-color	yellow-rgb  rgb(238, 212, 159);
 @define-color	green  #a6da95;
 @define-color	green-rgb  rgb(166, 218, 149);
 @define-color	teal  #8bd5ca;
 @define-color	teal-rgb  rgb(139, 213, 202);
-@define-color	sky  #91d7e3;
-@define-color	sky-rgb  rgb(145, 215, 227);
-@define-color	sapphire  #7dc4e4;
-@define-color	sapphire-rgb  rgb(125, 196, 228);
 @define-color	blue  #8aadf4;
 @define-color	blue-rgb  rgb(138, 173, 244);
-@define-color	lavender  #b7bdf8;
-@define-color	lavender-rgb  rgb(183, 189, 248);
 @define-color	text  #cad3f5;
 @define-color	text-rgb  rgb(202, 211, 245);
 @define-color	subtext1  #b8c0e0;
@@ -46,10 +24,6 @@
 @define-color	surface0-rgb  rgb(54, 58, 79);
 @define-color	base  #1A1A1A;
 @define-color	base-rgb  rgb(36, 39, 58);
-@define-color	mantle  #1e2030;
-@define-color	mantle-rgb  rgb(30, 32, 48);
-@define-color	crust  #181926;
-@define-color	crust-rgb  rgb(24, 25, 38);
 @define-color platinum #E5E4E2;
 
 * {
