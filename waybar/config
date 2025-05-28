@@ -2,7 +2,7 @@
 {
   "layer": "top",
   "position": "top",
-  "height": 25,
+  "height": 55,
   "margin-left": 10,
   "margin-right": 10,
   "margin-top": 10,
@@ -18,9 +18,9 @@
 
   "modules-right": [
     "network",
-    "cpu",
-    "memory",
-    "temperature",
+    // "cpu",
+    // "memory",
+    // "temperature",
     "backlight",
     "wireplumber",
     // "clock",
@@ -50,7 +50,7 @@
 
   "tray": {
     "icon-size": 16,
-    "spacing": 5,
+    "spacing": 8,
     "show-passive-items": true,
   },
 
@@ -166,8 +166,8 @@
       "critical": 15,
     },
     "format": "{capacity}% {icon}",
-    "format-charging": " {capacity}%",
-    "format-plugged": " {capacity}%",
+    "format-charging": "{capacity}% ",
+    "format-plugged": "{capacity}% ",
     "format-alt": "{icon}   {time}",
     // "format-good": "", // An empty format will hide the module
     // "format-full": "",
@@ -228,7 +228,7 @@
     "format": "{icon}",
     "format-icons": "",
     "exec-on-event": "true",
-    "on-click": "$HOME/.config/waybar/scripts/wifi-menu.sh",
+    "on-click": "kitty -e nmtui",
     "tooltip-format": "Wifi Menu",
   },
 
