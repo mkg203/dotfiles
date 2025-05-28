@@ -57,3 +57,5 @@ set -x PATH /home/muku/Desktop"/git-fuzzy/bin:$PATH"
  
 
 fish_add_path /home/muku/.spicetify
+
+abbr -a ls eza
