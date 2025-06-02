@@ -12,9 +12,9 @@
 
   // Choose the order of the modules
 
-  "modules-left": ["hyprland/workspaces", "river/tags", "tray"],
+  "modules-left": ["custom/notification", "hyprland/workspaces", "river/tags", "tray"],
 
-  "modules-center": ["clock"],
+  "modules-center": ["group/clock-date"],
 
   "modules-right": [
     "network",
@@ -54,11 +54,48 @@
     "show-passive-items": true,
   },
 
-  "clock": {
-    "interval": 60,
-    "format": "  {:%a %b %d      %I:%M %p}", // %b %d %Y  --Date formatting
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format-alt": "{:%Y-%m-%d %H:%M:%S   }",
+  "group/clock-date": {
+      "orientation": "inherit",
+      "drawer": {
+          "transition-duration": 500,
+          "children-class": "clock-drawer",
+          "transition-left-to-right": true
+      },
+      "modules": [
+          "group/clock",
+          "custom/date"
+      ]
+  },
+  "group/clock": {
+      "orientation": "inherit",
+      "modules": [
+          "custom/clock-hours",
+          "custom/clock-separator",
+          "custom/clock-minutes"
+      ]
+  },
+  "custom/clock-hours": {
+      "format": "{}",
+      "exec": "date '+%H'",
+      "tooltip": false,
+      "interval": 1
+  },
+  "custom/clock-separator": {
+      "format": ":",
+      "tooltip": false
+  },
+  "custom/clock-minutes": {
+      "format": "{}",
+      "exec": "date '+%M'",
+      "tooltip": false,
+      "interval": 1
+  },
+  "custom/date": {
+      "format": "{}",
+      "exec": "date '+%d/%m'",
+      "on-click": "~/.local/bin/launch_calendar",
+      "tooltip": false,
+      "interval": 30
   },
 
   "temperature": {
@@ -91,17 +128,17 @@
   "backlight": {
     // "device": "acpi_video1",
     "format": "{icon} {percent:>2}%",
-    "format-icons": [" ", " ", " ", " ", " ", " ", " ", " ", " "],
+    "format-icons": ["", "", "", "", "", "", "", "", ""],
     "on-click": "$HOME/.config/waybar/scripts/brightness-control.sh",
   },
 
   "network": {
     // "interface": "wlp2*", // (Optional) To force the use of this interface
     "interval": 1,
-    "format-wifi": "  {bandwidthTotalBytes:>2}", //({essid} {signalStrength}%)
-    "format-ethernet": " {bandwidthTotalBytes:>2}",
+    "format-wifi": " {bandwidthTotalBytes:>2}", //({essid} {signalStrength}%)
+    "format-ethernet": "{bandwidthTotalBytes:>2}",
     "tooltip-format-ethernet": "󰈀 {ipaddr}",
-    "tooltip-format-wifi": "  {essid} ({signalStrength}%)",
+    "tooltip-format-wifi": " {essid} ({signalStrength}%)",
     "tooltip-format": "󰤯 {ifname} via {gwaddr}",
     "format-linked": "󰀦 {ifname} (No IP)",
     "format-disconnected": "󰀦 Disconnected", //Disconnected ⚠
@@ -129,8 +166,8 @@
 
   "wireplumber": {
     "format": "{icon} {volume:>3}%",
-    "format-muted": "󰖁  {volume:>3}%",
-    "format-icons": [" ", " ", "  "],
+    "format-muted": "󰖁{volume:>3}%",
+    "format-icons": ["", "", ""],
     "on-click": "pavucontrol",
   },
 
@@ -171,11 +208,11 @@
     "format-alt": "{icon}   {time}",
     // "format-good": "", // An empty format will hide the module
     // "format-full": "",
-    "format-icons": [" ", " ", " ", " ", " "],
+    "format-icons": ["", "", "", "", ""],
   },
 
   "power-profiles-daemon": {
-    "format": " {icon}  {profile} ",
+    "format": " {icon} {profile} ",
     "format-icons": {
       "performance": "",
       "balanced": "",
@@ -220,7 +257,7 @@
     "format": "{icon}",
     "format-icons": "",
     "exec-on-event": "true",
-    "on-click": "$HOME/scripts/rofi-bluetooth",
+    "on-click": "blueman-manager",
     "tooltip-format": "Bluetooth Menu",
   },
 
@@ -249,22 +286,11 @@
 
   "custom/notification": {
     "tooltip": false,
-    "format": "{icon} {}",
-    "format-icons": {
-      "notification": "<span foreground='red'><sup></sup></span>",
-      "none": "",
-      "dnd-notification": "<span foreground='red'><sup></sup></span>",
-      "dnd-none": "",
-      "inhibited-notification": "<span foreground='red'><sup></sup></span>",
-      "inhibited-none": "",
-      "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
-      "dnd-inhibited-none": "",
-    },
-    "return-type": "json",
+    "format": "",
     "exec-if": "which swaync-client",
     "exec": "swaync-client -swb",
     "on-click": "swaync-client -t -sw",
     "on-click-right": "swaync-client -d -sw",
-    "escape": true,
+    "escape": true
   },
 }

@@ -8,10 +8,11 @@
 @define-color activegreen #52FF9A;
 @define-color red #D2042D;
 @define-color denim #6F8FAF;
+@define-color electric-blue #7DF9FF;
 
 * {
   min-height: 0;
-  font-family: "JetBrainsMono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
+  font-family: "CaskaydiaCove Nerd Font", Roboto, Helvetica, Arial, sans-serif;
   font-size: 16px; 
 }
 
@@ -54,7 +55,7 @@ button:hover {
 }
 
 #workspaces {
-  margin-left: 20px;
+  margin-left: 5px;
 }
 
 #workspaces button.urgent {
@@ -120,7 +121,6 @@ button:hover {
 #tray > .active,
 #mode,
 #scratchpad,
-#custom-notification,
 #custom-wifi,
 #custom-kdeconnect,
 #custom-bluetooth,
@@ -134,7 +134,12 @@ button:hover {
   color: #FFFFFF;
 }
 
-#custom-notification,
+#custom-notification {
+  /* margin-left: 20px; */
+  padding: 0 20px;
+  color: @electric-blue;
+}
+
 #custom-wifi,
 #custom-kdeconnect,
 #custom-bluetooth,
