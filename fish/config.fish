@@ -59,3 +59,6 @@ set -x PATH /home/muku/Desktop"/git-fuzzy/bin:$PATH"
 fish_add_path /home/muku/.spicetify
 
 abbr -a ls eza
+
+set fish_sequence_key_delay_ms 150
+bind --mode insert --sets-mode default jj repaint
