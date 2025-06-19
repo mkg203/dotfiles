@@ -14,10 +14,10 @@ function source-venv
 
 	if $result
 		set_color green
-		echo -n "success"
+		echo "success"
 	else
 		set_color red
-		echo -n "fail"
+		echo "fail"
 	end
 
 	cd $cdir
