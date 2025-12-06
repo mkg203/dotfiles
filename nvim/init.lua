@@ -85,6 +85,9 @@ vim.keymap.set('n', 's', '<nop>')
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
+-- Inline function def
+vim.keymap.set('n', '<leader>i', vim.lsp.buf.hover, { desc = 'Show function definition' })
+
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
 -- is not what someone will guess without a bit more experience.
@@ -581,6 +584,9 @@ require('lazy').setup({
     },
     opts = {
       notify_on_error = false,
+      default_format_opts = {
+        lsp_format = "fallback"
+      },
       -- format_on_save = function(bufnr)
       --   -- Disable "format_on_save lsp_fallback" for languages that don't
       --   -- have a well standardized coding style. You can add additional
@@ -701,7 +707,7 @@ require('lazy').setup({
         -- Some languages depend on vim's regex highlighting system (such as Ruby) for indent rules.
         --  If you are experiencing weird indenting issues, add the language to
         --  the list of additional_vim_regex_highlighting and disabled languages for indent.
-        additional_vim_regex_highlighting = { 'ruby' },
+        -- additional_vim_regex_highlighting = { 'ruby' },
       },
       indent = { enable = true, disable = { 'ruby' } },
     },
@@ -727,11 +733,11 @@ require('lazy').setup({
   -- require 'plugins.lint',
   -- require 'plugins.autopairs',
   -- require 'plugins.neo-tree',
-  require 'plugins.gitsigns', -- adds gitsigns recommend keymaps
-  require 'plugins.markdown-preview',
-  require 'plugins.tiny-inline',
-  require 'plugins.blink-cmp',
-  require 'plugins.mini',
+  -- require 'plugins.gitsigns', -- adds gitsigns recommend keymaps
+  -- require 'plugins.markdown-preview',
+  -- require 'plugins.tiny-inline',
+  -- require 'plugins.blink-cmp',
+  -- require 'plugins.mini',
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
   --
