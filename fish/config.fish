@@ -9,6 +9,8 @@ if [ $TERM = "xterm-kitty" ]
     alias ssh='kitten ssh'
 end
 
+set fish_color_command "blue"
+
 # function fish_prompt
 #
 #   # interactive user name @ host name, date/time in YYYY-mm-dd format and path
@@ -62,3 +64,21 @@ abbr -a ls eza
 
 set fish_sequence_key_delay_ms 150
 bind --mode insert --sets-mode default jj repaint
+bind -m default l forward-char
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+if test -f /home/muku/.miniforge3/bin/conda
+    eval /home/muku/.miniforge3/bin/conda "shell.fish" "hook" $argv | source
+else
+    if test -f "/home/muku/.miniforge3/etc/fish/conf.d/conda.fish"
+        . "/home/muku/.miniforge3/etc/fish/conf.d/conda.fish"
+    else
+        set -x PATH "/home/muku/.miniforge3/bin" $PATH
+    end
+end
+# <<< conda initialize <<<
+
+set -x PATH (pwd)"/git-fuzzy/bin:$PATH"
+set -x PATH (pwd)"/git-fuzzy/bin:$PATH"
