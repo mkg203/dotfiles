@@ -45,3 +45,7 @@ for i = 1, 10 do
 	-- move window to workspace
 	hl.bind(sideMod .. " + SHIFT + " .. tostring(i % 10), hl.dsp.window.move({ workspace = tostring(i) }))
 end
+
+hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("swayosd-client --output-volume raise"))
+hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("swayosd-client --output-volume lower"))
+hl.bind("XF86AudioMute", hl.dsp.exec_cmd("swayosd-client --output-volume mute-toggle"))

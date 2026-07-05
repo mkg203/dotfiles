@@ -4,6 +4,8 @@ local autostart = {
 	"dunst",
 	"pypr",
 	"warp-taskbar",
+	"pipewire",
+	"swayosd-server"
 }
 
 hl.on("hyprland.start", function()
